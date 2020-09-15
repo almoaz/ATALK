@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">a Talk</string>
+
+    <string name="navigation_open">Drawer Open</string>
+    <string name="navigation_close">Drawer Close</string>
+
+
+    <string-array name="CountryCode">
+        <item>Please Select Your Country</item>
+        <item>Bangladesh</item>
+        <item>America</item>
+        <item>Australia</item>
+        <item>India</item>
+        <item>Singapore</item>
+    </string-array>
+
+    <string-array name="group_condition">
+        <item>Select Your Group Privacy</item>
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+
+    <string-array name="channel_condition">
+        <item>Select Your Channel Privacy</item>
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+
+</resources>

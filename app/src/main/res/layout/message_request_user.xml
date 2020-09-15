@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    android:background="@drawable/edit_profile_box_background">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/request_user_profile_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="2dp"
+            tools:src="@drawable/profile_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/request_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="user name"
+                android:textAlignment="textStart"
+                android:textColor="@color/blackColor"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/request_accept_chat_request"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/group_btn_background"
+                    android:text="Accept"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlCompat"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/request_decline_chat_request"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/group_btn_background"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlCompat"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/accept_chat_request"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

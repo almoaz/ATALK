@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/invite_message_friend_profile_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="2dp"
+            tools:src="@drawable/profile_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/invite_message_friend_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="user name"
+                android:textAlignment="textStart"
+                android:textColor="@color/blackColor"
+                android:textSize="17sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/add_group_btn"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/group_btn_background"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/leave_group_btn"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/group_btn_background"
+                    android:text="Delete"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/add_channel_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/halfBlack" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:background="@drawable/edit_profile_box_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp">
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/note_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:layout_marginBottom="10dp"
+                android:defaultFocusHighlightEnabled="true"
+                android:padding="3dp"
+                tools:text="Post description..."
+                android:textAllCaps="false"
+                android:textColor="@color/blackColor"
+                android:textIsSelectable="true"
+                android:textSize="17sp"
+                app:colorClickableText="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showTrimExpandedText="true"
+                app:trimCollapsedText="Less"
+                app:trimExpandedText="Read More"
+                app:trimLines="12"
+                app:trimMode="trimModeLength" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/note_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="9dp"/>
+
+            <Button
+                android:id="@+id/edit_note_btn"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:background="@drawable/border"
+                android:textColor="@color/blackColor"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:text="Edit"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

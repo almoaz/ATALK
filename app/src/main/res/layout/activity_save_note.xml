@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaveNoteActivity"
+    android:background="@color/whiteColor">
+
+    <include
+        android:id="@+id/save_note_ap_bar"
+        layout="@layout/all_activity_app_bar">
+
+    </include>
+
+    <ImageView
+        android:id="@+id/save_note_app_bar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_click_icon"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/save_note_app_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="17dp"
+        android:textSize="17sp"
+        android:textColor="@color/whiteColor"
+        android:text=""
+        android:textAllCaps="false"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/add_note_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/whiteColor"
+        android:textAllCaps="false"
+        android:text="Add Note"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_save_note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/save_note_ap_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

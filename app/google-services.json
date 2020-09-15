@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "722065511775",
+    "firebase_url": "https://atalk-30c30.firebaseio.com",
+    "project_id": "atalk-30c30",
+    "storage_bucket": "atalk-30c30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722065511775:android:204513cbf3d9db03d852ea",
+        "android_client_info": {
+          "package_name": "com.approxsoft.atalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722065511775-bff56penc0nnbamu835g4m6f7jls8q61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD348-lU9ule7L13Ml7vXzAgT6f6JDEPWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722065511775-bff56penc0nnbamu835g4m6f7jls8q61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

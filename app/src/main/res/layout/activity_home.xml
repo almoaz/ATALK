@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/home_ap_bar"
+            layout="@layout/navigation_app_bar">
+
+        </include>
+
+        <ImageView
+            android:id="@+id/home_search_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/search_icon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="80dp"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/application_share_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/sheare_icon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            tools:ignore="ContentDescription"/>
+
+
+       <RelativeLayout
+           android:id="@+id/home_chat_relative_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/home_ap_bar"
+           >
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/chat_constraint_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/sub_home_ap_bar_background">
+
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Chat"
+                   android:textStyle="bold"
+                   android:textColor="@color/whiteColor"
+                   android:textSize="17sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="@+id/divider11"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <View
+                   android:id="@+id/divider11"
+                   android:layout_width="70dp"
+                   android:layout_height="1dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="2dp"
+                   android:background="@color/whiteColor"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+               <TextView
+                   android:id="@+id/chat_home_group_btn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Group"
+                   android:textColor="@color/whiteColor50"
+                   android:textSize="17sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="@+id/divider12"
+                   app:layout_constraintStart_toStartOf="@+id/divider12"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <View
+                   android:id="@+id/divider12"
+                   android:layout_width="70dp"
+                   android:layout_height="1dp"
+                   android:layout_marginTop="2dp"
+                   android:background="@color/colorAccent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@+id/divider13"
+                   app:layout_constraintStart_toEndOf="@+id/divider11"
+                   app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+               <TextView
+                   android:id="@+id/chat_home_channel_btn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Channel"
+                   android:textColor="@color/whiteColor50"
+                   android:textSize="17sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="@+id/divider13"
+                   app:layout_constraintStart_toStartOf="@+id/divider13"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+
+               <View
+                   android:id="@+id/divider13"
+                   android:layout_width="70dp"
+                   android:layout_height="1dp"
+                   android:layout_marginTop="2dp"
+                   android:layout_marginEnd="32dp"
+                   android:background="@color/colorAccent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+               android:id="@+id/message_refresh"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentEnd="true"
+               android:layout_below="@id/chat_constraint_layout"
+               android:layout_alignParentBottom="true">
+
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <RelativeLayout
+                       android:id="@+id/home_relative_layout"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/border"
+                       android:layout_marginTop="10dp"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentEnd="true">
+
+                       <androidx.recyclerview.widget.RecyclerView
+                           android:id="@+id/all_friend_online_status"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content" />
+
+                   </RelativeLayout>
+
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:id="@+id/all_friend_message_list"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_below="@id/home_relative_layout" />
+
+
+               </RelativeLayout>
+
+
+
+           </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+       </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/home_group_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/home_ap_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/group_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sub_home_ap_bar_background">
+
+                <TextView
+                    android:id="@+id/group_home_chat_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Chat"
+                    android:textColor="@color/whiteColor50"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/group_divider11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/group_divider11"
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/group_home_chat_btn" />
+
+
+                <TextView
+                    android:id="@+id/group_textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Group"
+                    android:textStyle="bold"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/group_divider12"
+                    app:layout_constraintStart_toStartOf="@+id/group_divider12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/group_divider12"
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/whiteColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/group_divider13"
+                    app:layout_constraintStart_toEndOf="@+id/group_divider11"
+                    app:layout_constraintTop_toBottomOf="@+id/group_textView5" />
+
+
+                <TextView
+                    android:id="@+id/group_home_Channel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Channel"
+                    android:textColor="@color/whiteColor50"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/group_divider13"
+                    app:layout_constraintStart_toStartOf="@+id/group_divider13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/group_divider13"
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/group_home_Channel_btn" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/group_message_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/group_constraint_layout"
+                android:layout_alignParentBottom="true">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/all_friend_group_message_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true" />
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/home_channel_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/home_ap_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/channel_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sub_home_ap_bar_background">
+
+                <TextView
+                    android:id="@+id/channel_home_chat_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Chat"
+                    android:textColor="@color/whiteColor50"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/channel_divider11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/channel_divider11"
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/channel_home_chat_btn" />
+
+
+                <TextView
+                    android:id="@+id/channel_home_group_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Group"
+                    android:textColor="@color/whiteColor50"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/channel_divider12"
+                    app:layout_constraintStart_toStartOf="@+id/channel_divider12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/channel_divider12"
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/channel_divider13"
+                    app:layout_constraintStart_toEndOf="@+id/channel_divider11"
+                    app:layout_constraintTop_toBottomOf="@+id/channel_home_group_btn" />
+
+
+                <TextView
+                    android:id="@+id/channel_textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Channel"
+                    android:textStyle="bold"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/channel_divider13"
+                    app:layout_constraintStart_toStartOf="@+id/channel_divider13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/channel_divider13"
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/whiteColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/channel_textView6" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/channel_message_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/channel_constraint_layout"
+                android:layout_alignParentBottom="true">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/all_friend_channel_message_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true" />
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/main_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/whiteColor" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

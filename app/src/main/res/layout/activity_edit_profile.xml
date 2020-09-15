@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:background="@color/whiteColor">
+
+   <include
+       android:id="@+id/edit_profile_ap_bar"
+       layout="@layout/all_activity_app_bar">
+
+   </include>
+
+    <ImageView
+        android:id="@+id/edit_profile_app_bar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_click_icon"
+        android:layout_margin="10dp"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/edit_profile_app_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="17dp"
+        android:textSize="17sp"
+        android:textColor="@color/whiteColor"
+        android:text=""
+        android:textAllCaps="false"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edit_profile_ap_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/all_edit_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/user_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Username"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/bio_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name_text"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Short description"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/favorite_pace_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bio_text"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Country name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/country_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_pace_name"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Country name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/location_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/country_name"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Country name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/edit_profile_save_changes_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/user_name1_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/all_edit_relativeLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/user_name_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Username"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+
+                <Button
+                    android:id="@+id/user_name_text1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name_text1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bio_text1_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/all_edit_relativeLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/bio_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Short description"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+
+                <Button
+                    android:id="@+id/bio_text1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bio_text1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/favorite_pace_name1_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/all_edit_relativeLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/favorite_pace_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Country name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+
+                <Button
+                    android:id="@+id/favorite_pace_name1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_pace_name1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/country_name1_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/all_edit_relativeLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/country_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Country name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+
+                <Button
+                    android:id="@+id/country_name1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/country_name1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/location_name1_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/all_edit_relativeLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/location_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:drawableStart="@drawable/left_space_background"
+                    android:drawableEnd="@drawable/left_space_background"
+                    android:hint="Country name"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+
+                <Button
+                    android:id="@+id/location_name1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location_name1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/edit_profile_box_background"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#308282</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#27B6B6</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="whiteColor50">#CECDCD</color>
+    <color name="blackColor">#000000</color>
+    <color name="halfBlack">#707070</color>
+    <color name="settingLinearLayoutColor">#F1F2F5</color>
+    <color name="settingLinearLayoutTextColor">#8D8D8D</color>
+    <color name="lineColor">#C1C1C1</color>
+</resources>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    tools:context=".GroupAndChannel_activity">
+
+    <include
+        android:id="@+id/group_app_bar"
+        layout="@layout/all_activity_app_bar">
+
+    </include>
+
+    <ImageView
+        android:id="@+id/group_channel_app_bar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_click_icon"
+        android:layout_margin="10dp"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/group_channel_app_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="17dp"
+        android:textSize="17sp"
+        android:textColor="@color/whiteColor"
+        android:text=""
+        android:textAllCaps="false"/>
+
+    <ImageView
+        android:id="@+id/group_and_channel_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/search_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        tools:ignore="ContentDescription"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/group_app_bar">
+
+        <RelativeLayout
+            android:id="@+id/group_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_profile_box_background">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:id="@+id/create_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/group_btn_background"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="6dp"
+                            android:text="Create Group"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/all_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/group_btn_background"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="6dp"
+                            android:text="All Group"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/create_group"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/your_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/group_btn_background"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="6dp"
+                            android:text="Your Group"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/all_group"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/group_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent"
+                android:text="My Group"
+                android:visibility="gone"
+                android:layout_below="@id/horizontal_scroll"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_group_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/group_text"
+                android:layout_margin="4dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/channel_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <HorizontalScrollView
+                android:id="@+id/channel_horizontal_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_profile_box_background">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:id="@+id/create_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/group_btn_background"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="6dp"
+                            android:text="Create Channel"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/all_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/group_btn_background"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="6dp"
+                            android:text="All Channel"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/create_channel"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/your_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/group_btn_background"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="6dp"
+                            android:text="Your Channel"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/all_channel"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/channel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent"
+                android:text="My Channel"
+                android:visibility="gone"
+                android:layout_below="@id/channel_horizontal_scroll"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_channel_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/channel_text"
+                android:layout_margin="4dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
